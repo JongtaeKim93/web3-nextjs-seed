@@ -1,59 +1,56 @@
-import React, {useEffect, useRef, useState } from 'react';
-import { Input } from 'antd';
-
+import React, { useEffect, useState, useRef } from 'react';
+import { Button, Form, Input } from 'antd';
+import NewUserInput from '../components/NewUserInput';
 
 const initUsers = [
 	{
 		id: 1,
-		name: 'kjt',
-		email: 'kjt@naver.com'
+		name: 'ken',
+		email: 'ken@flui.ai'
 	},
 	{
 		id: 2,
-		name: 'kjt2',
-		email: 'kjt@naver.com'
+		name: 'ken2',
+		email: 'ken2@flui.ai'
 	}
 ];
-
 
 const UserList = ({ users }) => {
 	return (
 		<div>
-			<h1>
-				UserList
-			</h1>
-			{users && users.map(user => <User user={user}/>)}
+			<h1>User List</h1>
+			{users && users.map(user => <User user={user} />)}
 		</div>
 	);
 };
-
 
 const User = ({ user }) => {
-	return (
-		<div>
-			Name: {user.name}
-		</div>
-	);
+	return <div>Name: {user.name}</div>;
 };
 
 
-const UserListContainer = (props) => {
+
+const UserListContainer = props => {
 	const [users, setUsers] = useState([]);
-	useEffect(()=>{
 
-	})
+	// useEffect(() => {});
+	//
+	// const ref = useRef();
+	function onInputChangeHandle(values) {
+		console.log('onInputChangeHandle', values);
 
-	const ref = useRef();
+		//const newUser = []
+		//for( const user in users) {
+		//
+		setUsers([...users, values])
+	}
 
 	return (
-		<React.Fragment>
-			<Input placeholder="사용자명을 입력해주세요"
-				   onchange={e => console.log(e)}
-				   style={{marginTop: 32}}/>
-			<UserList users={users}/>
-		</React.Fragment>
+		<>
+			<NewUserInput onSubmit={onInputChangeHandle} />
+			<UserList users={users} />
+		</>
 	);
 };
 
-export default UserListContainer
-0
+export default UserListContainer;
