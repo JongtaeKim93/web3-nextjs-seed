@@ -34,4 +34,8 @@ class NewUserInputComp extends React.Component {
 
 const NewUserInput = Form.create()(NewUserInputComp);
 
+<<<<<<< HEAD
 export default NewUserInput;
+=======
+export default NewUserInput;
+>>>>>>> upstream/master
