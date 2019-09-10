@@ -29,10 +29,6 @@ export default () => (
 				</Link>
 			</li>
 			<li>
-<<<<<<< HEAD
-				<Link href="/code">
-				<a>Code</a>
-=======
 				<Link href="/users">
 					<a>Add User to List</a>
 				</Link>
@@ -52,7 +48,12 @@ export default () => (
 			<li>
 				<Link href="/MARFCard">
 					<a>MARFCard</a>
->>>>>>> upstream/master
+				</Link>
+			</li>
+
+			<li>
+				<Link href="/flui-cards">
+					<a>FLUI Cards</a>
 				</Link>
 			</li>
 
