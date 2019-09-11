@@ -58,6 +58,12 @@ export default () => (
 			</li>
 
 			<li>
+				<Link href="/JTCards">
+					<a>JT Cards</a>
+				</Link>
+			</li>
+
+			<li>
 				<Link href="/getInitialProps">
 					<a>getInitialProps</a>
 				</Link>
