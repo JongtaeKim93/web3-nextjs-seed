@@ -9,6 +9,7 @@ import { Button, Divider, PageHeader, Typography } from 'antd';
 const { Title, Text } = Typography;
 
 // pages/index.jsimport getConfig from 'next/config'
+import getConfig from 'next/config';
 // Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
 const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 
@@ -72,6 +73,7 @@ const FLUIBank = ({ privateKey, abi, contractAddress }) => {
 
 FLUIBank.getInitialProps = async ({ pathname }) => {
 	console.log('FLUIBank::getInitialProps', pathname);
+	console.log('FLUIBank::getInitialProps::serverRuntimeConfig', serverRuntimeConfig);
 
 	const privateKey = serverRuntimeConfig.KLAYTN_PRIVATE_KEY;
 	const abi = await axios.get(serverRuntimeConfig.CONTRACT_ABI_JSON).then(res => {
