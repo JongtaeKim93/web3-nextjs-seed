@@ -70,6 +70,12 @@ export default () => (
 			</li>
 
 			<li>
+				<Link href="/flui-banks">
+					<a>FLUI Banks</a>
+				</Link>
+			</li>
+
+			<li>
 				<Link href="/jt-banks">
 					<a>JT Banks</a>
 				</Link>
